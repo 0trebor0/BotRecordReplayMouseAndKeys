@@ -22,7 +22,7 @@ def on_click(x, y, button, pressed):
 
 def on_press(key):
     global recording
-    if key == keyboard.Key.f11:
+    if key == keyboard.Key.f9:
         recording = not recording
         print(f"\n{'--- Recording STARTED ---' if recording else '--- Recording STOPPED ---'}")
         if not recording:
@@ -59,7 +59,7 @@ def start_listeners():
         keyboard_listener.join()
 
 if __name__ == "__main__":
-    print("Press F11 to start and stop recording for the game bot.")
+    print("Press F9 to start and stop recording for the game bot.")
     print("Mouse movements, clicks, and key presses will be recorded in JSON format.")
 
     listener_thread = threading.Thread(target=start_listeners)
