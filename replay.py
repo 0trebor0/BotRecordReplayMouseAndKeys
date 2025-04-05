@@ -1,4 +1,3 @@
-# replay_bot_f11.py - Optimized for game bot timing
 import time
 import json
 import pyautogui
@@ -64,13 +63,13 @@ def replay_actions(filename="game_recording.json"):
         print("No events to replay.")
         return
 
-    print("Waiting for F11 to start replay...")
+    print("Waiting for F9 to start replay...")
 
     start_replay_flag = False
 
     def on_press(key):
         nonlocal start_replay_flag
-        if key == Key.f11:
+        if key == Key.f9:
             start_replay_flag = True
             return False  # Stop the listener
 
